@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".SearchActivity">
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="7dp"
+    android:text="@string/SearchScreen.title"
+    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.047"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.022" />
+
+  <TextView
+    android:id="@+id/subtitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:lineSpacingExtra="2sp"
+    android:text="@string/SearchScreen.subtitle"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="@color/gray"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@+id/textView2"
+    app:layout_constraintStart_toStartOf="@+id/textView2"
+    app:layout_constraintTop_toBottomOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.0" />
+
+  <EditText
+    android:id="@+id/editTextELS"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="13dp"
+    android:autofillHints=""
+    android:ems="10"
+    android:hint="@string/SearchScreen.elsFieldLabel"
+    android:inputType="textPersonName"
+    android:minHeight="48dp"
+    android:text="@string/SearchScreen.elsFieldLabel"
+    app:layout_constraintEnd_toStartOf="@+id/aboutELSIcon"
+    app:layout_constraintStart_toStartOf="@+id/subtitle"
+    app:layout_constraintTop_toBottomOf="@+id/subtitle"
+    tools:text="@string/SearchScreen.elsFieldLabel" />
+
+  <ImageButton
+    android:id="@+id/aboutELSIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:backgroundTint="#00FFFFFF"
+    android:contentDescription="@string/SearchScreen.find"
+    android:src="@android:drawable/ic_menu_info_details"
+    app:layout_constraintBottom_toTopOf="@+id/goToPaymentBtn"
+    app:layout_constraintEnd_toEndOf="@+id/subtitle"
+    app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+  <Button
+    android:id="@+id/goToPaymentBtn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:text="@string/ChargesScreen.goToPayment"
+    app:layout_constraintEnd_toEndOf="@+id/aboutELSIcon"
+    app:layout_constraintStart_toStartOf="@+id/editTextELS"
+    app:layout_constraintTop_toBottomOf="@+id/editTextELS" />
+
+  <Button
+    android:id="@+id/findByELSBtn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:text="@string/SearchScreen.find"
+    app:layout_constraintEnd_toEndOf="@+id/goToPaymentBtn"
+    app:layout_constraintStart_toStartOf="@+id/goToPaymentBtn"
+    app:layout_constraintTop_toBottomOf="@+id/goToPaymentBtn" />
+
+  <Button
+    android:id="@+id/selectBankCardBtn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:text="Выбрать карту"
+    app:layout_constraintEnd_toEndOf="@+id/findByELSBtn"
+    app:layout_constraintStart_toStartOf="@+id/findByELSBtn"
+    app:layout_constraintTop_toBottomOf="@+id/findByELSBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
